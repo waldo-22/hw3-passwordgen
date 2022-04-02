@@ -61,20 +61,24 @@ function generatePassword(){
 //a. Password length 8 < 128
 
 function generatedPassLength() {
-let generatedPassLength = [8<128]; 
+let generatedPassLength = window.prompt("how long do you want your password to be? Must be atleast 8 but no more than 128:");
+  console.log("Users Input:" + generatedPassLength )
 
-let randomNumber = Math.random()*generatedPassLength.length;;
+let randomNumber = Math.random()*generatedPassLength.length;
 let roundedNumber = Math.floor(generatedPassLength);
-let generatePassword = generatedPassLength[roundedNumber];
+let generatedPassword = generatedPassLength[roundedNumber];
 }
 
 // b. lowercase, uppercase, numbers, special characters
 
 
 function generatedLowercase() {
-let generatedLowercase = ["abcdefghijklmnopqrstuvwxyz"]
+let lowerCase = ["abcdefghijklmnopqrstuvwxyz"]
 let randomNumber2 = Math.random()*generatedLowercase.length;;
-
+let generatedLowercase = window.confirm("do you want lower cases in your password?")
+// insert "concat" and "spit" for results without decimals"
+    let result = []
+    if (lowerCase ===
 }
 
 function generatedUppercase() {
