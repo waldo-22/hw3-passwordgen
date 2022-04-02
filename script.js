@@ -74,7 +74,7 @@ let generatedPassword = generatedPassLength[roundedNumber];
 
 function generatedLowercase() {
 let lowerCase = ["abcdefghijklmnopqrstuvwxyz"]
-let randomNumber2 = Math.random()*generatedLowercase.length;;
+let randomNumber = Math.random()*generatedLowercase.length;;
 let generatedLowercase = window.confirm("do you want lower cases in your password?")
 // insert "concat" and "spit" for results without decimals"
 }
@@ -85,28 +85,28 @@ if (lowerCase === true) {
 
 function generatedUppercase() {
 let generatedUppercase = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"]
-let randomNumber3 = Math.random()*generatedUppercase.length;;
+let randomNumber = Math.random()*generatedUppercase.length;;
 
 }
 
 
 function generatedNumber() {
 let generatedNumber = ["0123456789"]
-let randomNumber4 = Math.random()*generatedNumber.length;;
+let randomNumber = Math.random()*generatedNumber.length;;
 
 }
 
 function generatedSymbol() {
 let generatedSymbol = ["!@#$%^&*()~`_-+=}{[]:;?/>.<,"]
-let randomNumber5 = Math.random()*generatedSymbol.length;;
+let randomNumber = Math.random()*generatedSymbol.length;;
 
-}
-for (let i = 0; i < userNumberInput; i++) {
-  let randomNumber = Math.random() * userCharacters.length;
-  let roundedNumber = Math.floor(randomNumber);
+//}
+//for (let i = 0; i < userNumberInput; i++) {
+  //let randomNumber = Math.random() * userCharacters.length;
+  //let roundedNumber = Math.floor(randomNumber);
 
-  finalPassword += userCharacters[roundedNumber];
-}
+  //finalPassword += userCharacters[roundedNumber];
+//}
 
 
 // 2. Validate input
