@@ -77,9 +77,11 @@ let lowerCase = ["abcdefghijklmnopqrstuvwxyz"]
 let randomNumber2 = Math.random()*generatedLowercase.length;;
 let generatedLowercase = window.confirm("do you want lower cases in your password?")
 // insert "concat" and "spit" for results without decimals"
-    let result = []
-    if (lowerCase ===
 }
+let result = []
+if (lowerCase === true) {
+  result = result.concat(lowerCase.split(""))
+  
 
 function generatedUppercase() {
 let generatedUppercase = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"]
@@ -98,6 +100,12 @@ function generatedSymbol() {
 let generatedSymbol = ["!@#$%^&*()~`_-+=}{[]:;?/>.<,"]
 let randomNumber5 = Math.random()*generatedSymbol.length;;
 
+}
+for (let i = 0; i < userNumberInput; i++) {
+  let randomNumber = Math.random() * userCharacters.length;
+  let roundedNumber = Math.floor(randomNumber);
+
+  finalPassword += userCharacters[roundedNumber];
 }
 
 
