@@ -1,140 +1,71 @@
-// Assignment Code
 let generateBtn = document.querySelector("#generate");
-
+let result = []
+let generatedPasswordLength; 
 // Write password to the #password input
-function writePassword() {
+function writePassword() { 
+  let passwordLength = generatedPassLength()
+  console.log(passwordLength);
+  generatedLowercase()
+  generatedUppercase()
+  generatedNumber()
+  generatedSymbol()
   let password = generatePassword();
   let passwordText = document.querySelector("#password");
-
   passwordText.value = password;
-
+  result = [] 
 }
-
-// Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
-// /////////////////////////////////////////////////////////////////////////////////////////////
-// *Code Chart = CharCode
-
-//function getRandomLowercase() {
-  //return string.fromCharCode(Math.floor(Math.random()*26) + 97);
-//}
-  //console.log(getRandomLowercase());
-
-//function getRandomUppercase() {
-  //return string.fromCharCode(Math.floor(Math.random()*26) + 65);
-//}
-  //console.log(getRandomUppercase());
-
-//function getRandomNumber() {
-  //return string.fromCharCode(Math.floor(Math.random()*10) + 48);
-//}
-  //console.log(getRandomNumber());
-
-//function getRandomSymbol() {
-  //return symbols[Math.floor(Math.random() * symbols.lenth)];
-  //const symbols = "~`!@#$%^&*()_-+={[}]':;?,/.><";
-  
-  //}
-  //console.log(getRandomSymbol)
-
-
-
-
-  //prev.addEventListener("click", function(event) {
-
-    //container.addEventListener("click", function(event) {
-
-
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// 
-
-//--------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
 function generatePassword(){
-  console.log("did something 1");
-
-    return "did something 2";
+  let password = "";
+  for (let i = 0; i < generatedPasswordLength; i++) {
+    password += result[Math.floor(Math.random()*result.length)]
+  }
+  return password;
 }
-
-//a. Password length 8 < 128
-
 function generatedPassLength() {
-let generatedPassLength = window.prompt("how long do you want your password to be? Must be atleast 8 but no more than 128:");
-  console.log("Users Input:" + generatedPassLength )
-
-let randomNumber = Math.random()*generatedPassLength.length;
-let roundedNumber = Math.floor(generatedPassLength);
-let generatedPassword = generatedPassLength[roundedNumber];
+generatedPasswordLength = window.prompt("how long do you want your password to be? Must be atleast 8 but no more than 128:");
+return generatedPasswordLength
 }
-
-// b. lowercase, uppercase, numbers, special characters
-
-
 function generatedLowercase() {
-let lowerCase = ["abcdefghijklmnopqrstuvwxyz"]
-let randomNumber = Math.random()*generatedLowercase.length;;
-let generatedLowercase = window.confirm("do you want lower cases in your password?")
-// insert "concat" and "spit" for results without decimals"
-}
-let result = []
-if (lowerCase === true) {
-  result = result.concat(lowerCase.split(""))
-  
+  let generatedLowerLetters = window.confirm("do you want lower cases in your password?")
+  let lowerCase = "abcdefghijklmnopqrstuvwxyz"
+  if (generatedLowerLetters === true) {
+    result = result.concat(lowerCase.split(""))
+  }
+  console.log(result)
 
+}
 function generatedUppercase() {
-let generatedUppercase = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"]
-let randomNumber = Math.random()*generatedUppercase.length;;
-
+  let generatedUpperLetters = window.confirm("do you want upper cases in your password?")
+  let generatedUppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+  if (generatedUpperLetters === true) {
+      result = result.concat(generatedUppercase.split(""))
+  }
 }
-
-
 function generatedNumber() {
-let generatedNumber = ["0123456789"]
-let randomNumber = Math.random()*generatedNumber.length;;
-
+  let userWantsNumbers = window.confirm("do you want numbers in your password?")
+  let generatedNumber = "0123456789"
+  if (userWantsNumbers === true) {
+    result = result.concat(generatedNumber.split(""))
+}
+}
+function generatedSymbol() {
+  let userWantsSymbols = window.confirm("do you want symbols in your password?")
+  let generatedSymbol = "!@#$%^&*()~`_-+=}{[]:;?/>.<,"
+  if (userWantsSymbols === true) {
+    result = result.concat(generatedSymbol.split(""))
+}
 }
 
-function generatedSymbol() {
-let generatedSymbol = ["!@#$%^&*()~`_-+=}{[]:;?/>.<,"]
-let randomNumber = Math.random()*generatedSymbol.length;;
-
-//}
-//for (let i = 0; i < userNumberInput; i++) {
-  //let randomNumber = Math.random() * userCharacters.length;
-  //let roundedNumber = Math.floor(randomNumber);
-
-  //finalPassword += userCharacters[roundedNumber];
-//}
-
-
-// 2. Validate input
-//?????????????????????????????
-
-
-
-
-
-
-// 3. Generate password based on the criteria
-
-
-
-
-
-
-
-// 4. Display password to the page.
-
-
-
-
-
-
-
-
-
-
-
-
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
